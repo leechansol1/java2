@@ -19,6 +19,18 @@ C/C++의 경우는 문자열을 사용하기 위해서 실제로 char형의 배�
 자바가 C/C++과 달리 String형을 따로 제공하는 이유는 문자열에 유용한 메서드를 제공하기 위해서이다. charAt, concat, equals, indexOf, split와 같은 메서드를 이용하면 문자열을 쉽게 조작할 수 있다.
 
 식별자는 코드의 일부이지만 문자열은 데이터이기 때문에, 식별자와 문자열은 다릅니다. JavaScript에서 식별자를 문자열로 변환하는 방법은 없지만, 어떤 경우 문자열을 분석해 식별자로 사용할 수 있습니다.
+
+public class Bar {
+    Run|Debug
+  public static void main(String[]args) {
+    final double PI = 3.14;
+    double radius = 10.2;
+    double circleArea = radius*radius*PI; // 원의 면적 계산
+    // 원의 면적을 화면에 출력한다
+    System.out.print("반지름" + radius+", ");
+    System.out.println("원의 면적 = " + circleArea");
+  }
+}
 ## 3월 20일(3주차)
 *배운내용 자바 서치를 이용해 파일을 찾아낼수 있다
 프로젝트디렉토리에서 프로젝트 안에 프로젝트가 들어갈 수 있다 하지만 그러면 파일이 꼬인다
