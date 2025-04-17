@@ -36,19 +36,19 @@ class Person {
     String name;
     int age;
 
-    // 기본 생성자
+     기본 생성자
     public Person() {
         this.name = "이름 없음";
         this.age = 0;
     }
 
-    // 매개변수 생성자
+     매개변수 생성자
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    // 복사 생성자
+     복사 생성자
     public Person(Person other) {
         this.name = other.name;
         this.age = other.age;
