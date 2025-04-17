@@ -29,6 +29,8 @@ public class Counters {
         System.out.println(no + "번 객체의 finalize()가 실행됨");
     }
 }
+**
+
 
 # 매개변수(parameter)와 전달인자(argument)
 
