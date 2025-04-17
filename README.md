@@ -4,6 +4,32 @@
 
 ### 배운내용
 
+# 객체 소멸자와 Garbage Collector
+
+## Garbage Collector
+- 참조하지 않는 배열이나 객체는 Garbage Collector가 힙 영역에서 자동적으로 소멸시킵니다.
+- Garbage Collector는 객체를 소멸하기 직전에 마지막으로 객체 소멸자 `finalize()`를 실행합니다.
+
+## 소멸자
+- `Object`의 `finalize()` 메서드는 기본적으로 실행 내용이 없습니다.
+- 객체가 소멸되기 전에 마지막으로 사용했던 자원(데이터 연결, 파일 등)을 닫거나 중요한 데이터를 저장하고 싶다면 `Object`의 `finalize()`를 재정의할 수 있습니다.
+
+### 예제
+```java
+public class Counters {
+    private int no;
+
+    public Counters(int no) {
+        this.no = no;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        // finalize()를 오버라이딩
+        System.out.println(no + "번 객체의 finalize()가 실행됨");
+    }
+}
+
 # 매개변수(parameter)와 전달인자(argument)
 
 종종 매개변수(parameter)와 전달인자(argument)는 적당히 섞어서 쓰이기도 하며, 이 경우 문맥에 따라 의미를 달리 해석되기도 합니다. 하지만 엄밀히 말해서:
