@@ -30,6 +30,51 @@
 ## 결론
 - 생성자 `this()`와 참조변수 `this`는 전혀 다른 것이므로 헷갈리지 않도록 주의해야 합니다.
 
+### 코드 예시
+
+class Person {
+    String name;
+    int age;
+
+    // 기본 생성자
+    public Person() {
+        this.name = "이름 없음";
+        this.age = 0;
+    }
+
+    // 매개변수 생성자
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // 복사 생성자
+    public Person(Person other) {
+        this.name = other.name;
+        this.age = other.age;
+    }
+
+    public void displayInfo() {
+        System.out.println("이름: " + name + ", 나이: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // 기본 생성자 사용
+        Person person1 = new Person();
+        person1.displayInfo();
+
+        // 매개변수 생성자 사용
+        Person person2 = new Person("홍길동", 25);
+        person2.displayInfo();
+
+        // 복사 생성자 사용
+        Person person3 = new Person(person2);
+        person3.displayInfo();
+    }
+}
+
 ## 4월 10일 (6주차)
 
 ### 배운 내용
