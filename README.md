@@ -56,7 +56,7 @@
     public void displayInfo() {
         System.out.println("이름: " + name + ", 나이: " + age);
     }
-}
+    }
 
 public class Main {
     public static void main(String[] args) {
@@ -72,7 +72,7 @@ public class Main {
         Person person3 = new Person(person2);
         person3.displayInfo();
     }
-}
+    }
 
 ## 4월 10일 (6주차)
 
