@@ -61,15 +61,15 @@ class Person {
 
 public class Main {
     public static void main(String[] args) {
-        // 기본 생성자 사용
+        기본 생성자 사용
         Person person1 = new Person();
         person1.displayInfo();
 
-        // 매개변수 생성자 사용
+        매개변수 생성자 사용
         Person person2 = new Person("홍길동", 25);
         person2.displayInfo();
 
-        // 복사 생성자 사용
+        복사 생성자 사용
         Person person3 = new Person(person2);
         person3.displayInfo();
     }
