@@ -14,7 +14,7 @@
 - `Object`의 `finalize()` 메서드는 기본적으로 실행 내용이 없습니다.
 - 객체가 소멸되기 전에 마지막으로 사용했던 자원(데이터 연결, 파일 등)을 닫거나 중요한 데이터를 저장하고 싶다면 `Object`의 `finalize()`를 재정의할 수 있습니다.
 
-## 예제
+# 예제
 ```java
 public class Counters {
     private int no;
