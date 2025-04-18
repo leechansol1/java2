@@ -136,7 +136,7 @@ public class Counters {
         // finalize()를 오버라이딩
         System.out.println(no + "번 객체의 finalize()가 실행됨");
     }
-}
+    }
     
 
 # 4월 10일 (6주차)
