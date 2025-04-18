@@ -1,5 +1,106 @@
 # 202103323 이찬솔
 
+## 4월 18일 (8주차)
+
+### 배운내용
+
+# 객체속의 this
+
+객체속 변수 
+
+이름 : 값 > key & value , 키 와 값 
+
+​
+
+let person1 = {
+
+​
+
+name : "홍길동",
+
+cm : 180,
+
+kg : 80,
+
+age : 20,
+
+birthday: "681212",
+
+id : "123456",
+
+eat : function(){ /*실행문*/},
+
+uId : function(){
+
+// this : 자기자신 객체 의미
+
+return this.birthday+"-"+this.id;
+
+}
+
+};
+
+​
+
+객체 호출방법
+
+객체이름.프로퍼티이름
+
+console.log(person.name);
+
+console.log(person["name"]);
+
+​
+
+객체의 파라미터를 호출하는 방법
+
+객체이름.매소드이름()
+
+console.log(person.eat());
+
+​
+
+ for in / for of
+
+​
+
+let key : object안에 있는 이름값
+
+for ( 변수명 in 객체, 배열 )
+
+​
+
+for (let key in person) {
+
+console.log( key+ " : "+ person[key] );
+
+}
+
+​
+
+ function을 이용해서 객체 만들기
+
+프로토타입(기본모습) > 생성자메소드
+
+​
+
+function Person(name,cm,kg,addr,age){
+
+// this가 붙은 변수는 function내부의 변수에 선언한다
+
+// this가 없는 변수는 파라미터로 받은 변수
+
+this.name = name;
+
+this.cm = cm;
+
+this.kg = kg;
+
+this.addr = addr;
+
+this.age = age;
+
+}
 ## 4월 17일 (7주차)
 
 ### 배운내용
