@@ -122,7 +122,7 @@ public class Main {
 - `Object`의 `finalize()` 메서드는 기본적으로 실행 내용이 없습니다.
 - 객체가 소멸되기 전에 마지막으로 사용했던 자원(데이터 연결, 파일 등)을 닫거나 중요한 데이터를 저장하고 싶다면 `Object`의 `finalize()`를 재정의할 수 있습니다.
 
-## 예제
+#### 예제
 ```java
 public class Counters {
     private int no;
@@ -139,9 +139,9 @@ public class Counters {
 }
     
 
-## 4월 10일 (6주차)
+# 4월 10일 (6주차)
 
-### 배운 내용
+## 배운 내용
 
 #### 캡슐화 (Encapsulation)
 - 객체의 데이터(필드)와 동작(메소드)을 하나로 묶고, 실제 구현 내용을 외부에 감추는 것.
