@@ -129,7 +129,7 @@ people[2] = new Person("이순신");
 
 # 4월 17일 (7주차)
 
-### 배운내용
+## 배운내용
 
 # 매개변수(parameter)와 전달인자(argument)
 
