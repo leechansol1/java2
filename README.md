@@ -2,50 +2,86 @@
 
 ---
 
-## ✅ 10주차 (5월 8일)
+## ✅ 11주차 (5월 15일)
 
-## 🧩 추상 클래스
+📘 Java Wrapper 클래스 활용 및 박싱/언박싱 정리
+✅ 예제 6-5 : Wrapper 클래스 활용
+java
+복사
+편집
+// Character 사용
+System.out.println(Character.toLowerCase('A')); // 'A'를 소문자로 변환
+char c1 = '4', c2 = 'F';
+if (Character.isDigit(c1))                     // c1이 숫자면 true
+    System.out.println(c1 + "는 숫자");
+if (Character.isAlphabetic(c2))                // c2가 영문자면 true
+    System.out.println(c2 + "는 영문자");
 
-### 🔹 추상 메서드 (abstract method)
-- `abstract` 키워드로 선언된 메서드  
-- **메서드의 구현 없이 선언만 존재함**
-- ✅ 예시:
-  ```java
-  abstract public String getName(); // 추상 메서드
+// Integer 사용
+System.out.println(Integer.parseInt("28"));        // 문자열 "28" → 정수
+System.out.println(Integer.toString(28));          // 정수 → 문자열
+System.out.println(Integer.toBinaryString(28));    // 2진수 문자열로 변환
+System.out.println(Integer.bitCount(28));          // 2진수에서 1의 개수
+Integer i = Integer.valueOf("28");                 
+System.out.println(i.doubleValue());               // 정수 → double 변환
 
-  abstract public String fail() { return "Good Bye"; } // 추상 메서드 아님. 컴파일 오류
+// Double 사용
+Double d = Double.valueOf("3.14");
+System.out.println(d.toString());                  // double → 문자열
+System.out.println(Double.parseDouble("3.14"));    // 문자열 → 실수
 
-abstract class Shape {
-    public Shape() { ... }
-    public void edit() { ... }
-    abstract public void draw(); // 추상 메서드
-}
-class Fault { 
-    // 오류: 추상 메서드를 가지고 있으므로 abstract로 선언되어야 함
-    abstract public void f(); 
-}
+// Boolean 사용
+boolean b = (4 > 3);                                // true
+System.out.println(Boolean.toString(b));           // boolean → 문자열
+System.out.println(Boolean.parseBoolean("false")); // 문자열 → boolean
+📌 출력 결과
+nginx
+복사
+편집
+a
+4는 숫자
+F는 영문자
+28
+28
+11100
+3
+28.0
+3.14
+3.14
+true
+false
+💬 개념 설명
+Wrapper 클래스는 기본 자료형을 객체처럼 다룰 수 있게 해주는 클래스입니다.
 
-## 자바의 패키지와 모듈이란?
+Character, Integer, Double, Boolean 등이 이에 해당합니다.
 
----
+각 클래스는 문자열 변환, 타입 검사 등 유용한 메서드를 제공합니다.
 
-### ● 패키지(package)
-- 서로 관련된 클래스와 인터페이스를 컴파일한 **클래스 파일들을 묶어 놓은 디렉터리**
-- 하나의 응용프로그램은 **한 개 이상의 패키지로 작성**
-- 패키지는 **`.jar` 파일로 압축**할 수 있음
+✅ 박싱(Boxing)과 언박싱(Unboxing)
+java
+복사
+편집
+// 명시적 박싱
+Integer ten = Integer.valueOf(10); // int → Integer
 
----
+// 명시적 언박싱
+int n = ten.intValue(); // Integer → int
 
-### ● 모듈(module)
-- 여러 **패키지와 이미지 등의 자원**을 모아 놓은 **컨테이너**
-- 하나의 모듈을 하나의 **`.jmod` 파일에 저장**
+// 자동 박싱 (JDK 1.5 이상)
+Integer ten = 10; // 내부적으로 Integer.valueOf(10) 처리
 
----
+// 자동 언박싱
+int n = ten; // 내부적으로 ten.intValue() 처리
+💬 개념 설명
+박싱(Boxing): 기본 타입(int 등)을 **Wrapper 객체(Integer 등)**로 감싸는 것
 
-### ● Java 9부터 모듈화 도입
-- **플랫폼의 모듈화**  
-  : Java 9부터 자바 API의 모든 클래스들(자바 실행 환경)을 패키지 기반에서 모듈들로 완전히 재구성
+언박싱(Unboxing): Wrapper 객체에서 기본 값을 꺼내는 것
 
-- **응용프로그램의 모듈화**  
-  : 클래스들은 패키지로 만들고, 다시 패키지를 모듈로 만듦  
-  → 모듈 프로그래밍은 어렵고 복잡. **기존 방식으로 프로그램 작성**
+자동 박싱/언박싱은 JDK 1.5부터 자동 처리되어 코드가 간결해집니다.
+
+📌 시각적 요약
+scss
+복사
+편집
+[10]  → Integer.valueOf(10) → [Integer 객체]
+[Integer 객체] → intValue() → [10]
