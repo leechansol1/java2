@@ -8,8 +8,6 @@
 JFrame은 Java Swing 라이브러리에서 제공하는 클래스로, 기본 윈도우 창을 생성할 때 사용됩니다. Java GUI 애플리케이션의 시작점이라고 볼 수 있습니다.
 
 java
-복사
-편집
 import javax.swing.JFrame;
 
 public class MyWindow {
@@ -19,6 +17,8 @@ public class MyWindow {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // 닫기 버튼 동작 설정
         frame.setVisible(true);              // 창을 화면에 표시
     }
+}
+
 }
 ✅ 주요 메서드 요약
 메서드	설명
